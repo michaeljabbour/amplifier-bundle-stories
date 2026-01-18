@@ -43,7 +43,7 @@ Transform development activity into professional content - automatically, across
 
 ### 1. Install Anthropic Skills (Required)
 
-The storyteller uses Anthropic's skills library for document creation:
+The agents use Anthropic's skills library for PowerPoint, Excel, Word, and PDF creation:
 
 ```bash
 # Clone skills repository
@@ -58,16 +58,92 @@ skills:
 EOF
 ```
 
-**Note:** Restart your Amplifier session after configuring skills.
+### 2. Activate the Bundle
 
-### 2. Verify Skills Are Loaded
+Update your `~/.amplifier/settings.yaml` to use this bundle:
 
-After restarting Amplifier:
+```yaml
+bundle:
+  active: amplifier-module-stories
 ```
-"list available skills"
+
+**Note:** Despite "module" in the name, this is an Amplifier **bundle** (not a module). Bundles provide agents, recipes, and behaviors. The name reflects its role as a storytelling capability for the module ecosystem.
+
+### 3. Restart Amplifier
+
+After configuring skills and activating the bundle:
+```bash
+# Exit current session
+exit
+
+# Start new session
+amplifier
 ```
 
-You should see: pptx, xlsx, docx, pdf (and others)
+### 4. Verify Bundle Is Active
+
+In your new session:
+```
+"list available agents"
+```
+
+You should see: storyteller, story-researcher, content-strategist, technical-writer, marketing-writer, executive-briefer, release-manager, case-study-writer, data-analyst, content-adapter, community-manager (11 total)
+
+---
+
+## Quick Test
+
+Once the bundle is active, test in a new Amplifier session with these prompts:
+
+### Test 1: Verify Agent Availability
+```
+"list available agents"
+```
+**Expected:** See all 11 agents (storyteller + 10 specialists)
+
+### Test 2: Manual Content Creation
+```
+"Use storyteller to create a PowerPoint slide using the title template about testing amplifier-module-stories"
+```
+**Expected:** Single PowerPoint slide created and auto-opened
+
+### Test 3: Story Research
+```
+"Use story-researcher to gather data about the amplifier-module-stories repository"
+```
+**Expected:** Structured JSON with repository metrics, commits, timeline
+
+### Test 4: Automated Recipe - Weekly Digest
+```
+"Run the weekly-digest recipe for the amplifier ecosystem"
+```
+**Expected:** Blog post + email + social media content generated (3-4 minutes)
+
+### Test 5: Automated Recipe - Blog Post
+```
+"Run blog-post-generator with feature_name='shadow environments' target_audience='community'"
+```
+**Expected:** Blog post + social media snippets created and auto-opened (2.5-5 minutes)
+
+### Test 6: Multi-Format Storytelling
+```
+"Create a PowerPoint, Excel dashboard, and PDF one-pager about amplifier-module-stories capabilities"
+```
+**Expected:** Three files created in parallel, all auto-opened
+
+### Test 7: Content Adaptation
+```
+"Use content-adapter to convert one of the HTML presentations in docs/ to a Word document"
+```
+**Expected:** Word document created with expanded content from HTML slides
+
+### Test 8: Agent Coordination
+```
+"Use story-researcher to gather shadow environments data, then content-strategist to plan a multi-format campaign, then show me the plan"
+```
+**Expected:** Complete content plan with audience mapping and format selection
+
+**For comprehensive testing:** See `tests/examples/*.md` for detailed test procedures for all 4 recipes.
 
 ## Usage Examples
 
