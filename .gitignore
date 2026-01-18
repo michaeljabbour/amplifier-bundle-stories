@@ -4,6 +4,11 @@ __pycache__/
 *.pyc
 .amplifier/
 
+# Python cache directories
+.ruff_cache/
+.mypy_cache/
+.pytest_cache/
+
 # PowerPoint workspace temporary files
 pptx-workspace/html-slides/*
 pptx-workspace/assets/*
@@ -27,9 +32,19 @@ workspace/docx/*.py
 workspace/pdf/*.py
 !workspace/pdf/output/*.pdf
 
-# Claude artifacts (if generated)
+# Analysis outputs from tools/
+*.csv
+*.json
+!package.json
+!package-lock.json
+tools/*.csv
+tools/*.json
+
+# Claude artifacts
 .claude/
 
 # OS files
 .DS_Store
+.DS_Store?
+._*
 Thumbs.db
