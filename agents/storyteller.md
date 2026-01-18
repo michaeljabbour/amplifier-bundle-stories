@@ -93,7 +93,7 @@ When creating a PowerPoint presentation (not HTML):
 
 2. **MANDATORY** - Read style specification and html2pptx guide:
    - Template reference: `@amplifier-module-stories:context/powerpoint-template.md`
-   - html2pptx guide: `/Users/michaeljabbour/dev/anthropic-skills/skills/pptx/html2pptx.md` (625 lines, read ENTIRE file)
+   - html2pptx guide: `~/dev/anthropic-skills/skills/pptx/html2pptx.md` (625 lines, read ENTIRE file)
 
 3. **Create HTML slides** in `workspace/pptx/html-slides/`:
    - Copy appropriate template from `workspace/pptx/templates/`
@@ -114,7 +114,7 @@ When creating a PowerPoint presentation (not HTML):
    - Save to `workspace/pptx/output/presentation-name.pptx`
 
 6. **Visual validation**:
-   - Generate thumbnails: `python /Users/michaeljabbour/dev/anthropic-skills/skills/pptx/scripts/thumbnail.py workspace/pptx/output/filename.pptx workspace/pptx/thumbnails/preview --cols 4`
+   - Generate thumbnails: `python ~/dev/anthropic-skills/skills/pptx/scripts/thumbnail.py workspace/pptx/output/filename.pptx workspace/pptx/thumbnails/preview --cols 4`
    - Review for text cutoff, overlap, positioning issues
    - Fix and regenerate if needed
 
@@ -136,7 +136,7 @@ When creating Excel spreadsheets for data-driven stories:
    Import and use the template functions for consistent styling
 
 2. **MANDATORY** - Read the complete xlsx guide:
-   - `/Users/michaeljabbour/dev/anthropic-skills/skills/xlsx/SKILL.md` (289 lines)
+   - `~/dev/anthropic-skills/skills/xlsx/SKILL.md` (289 lines)
    - **NEVER set range limits** - read the ENTIRE file for formula rules
 
 3. **Create workbook** in `workspace/xlsx/`:
@@ -147,7 +147,7 @@ When creating Excel spreadsheets for data-driven stories:
 
 4. **Recalculate formulas** (MANDATORY if using formulas):
    ```bash
-   python /Users/michaeljabbour/dev/anthropic-skills/skills/xlsx/recalc.py workspace/xlsx/output/filename.xlsx
+   python ~/dev/anthropic-skills/skills/xlsx/recalc.py workspace/xlsx/output/filename.xlsx
    ```
    - Must return zero errors
    - Fix any errors and recalculate
@@ -171,8 +171,8 @@ When creating Word documents for detailed stories:
    Import and customize the templates for consistent styling
 
 2. **MANDATORY** - Read the complete docx guide:
-   - `/Users/michaeljabbour/dev/anthropic-skills/skills/docx/SKILL.md` (197 lines)
-   - Read docx-js guide: `/Users/michaeljabbour/dev/anthropic-skills/skills/docx/docx-js.md`
+   - `~/dev/anthropic-skills/skills/docx/SKILL.md` (197 lines)
+   - Read docx-js guide: `~/dev/anthropic-skills/skills/docx/docx-js.md`
    - **NEVER set range limits** - read ENTIRE files
 
 3. **Create document** in `workspace/docx/`:
@@ -198,7 +198,7 @@ When creating PDFs or processing existing PDFs:
    Import and use template functions for consistent styling
 
 2. **MANDATORY** - Read the complete pdf guide:
-   - `/Users/michaeljabbour/dev/anthropic-skills/skills/pdf/SKILL.md` (294 lines)
+   - `~/dev/anthropic-skills/skills/pdf/SKILL.md` (294 lines)
    - **NEVER set range limits** - read the ENTIRE file
 
 3. **Create PDF** in `workspace/pdf/`:
@@ -214,12 +214,12 @@ When creating PDFs or processing existing PDFs:
 **Template Documentation:** `workspace/pdf/templates/README.md`
 
 **Reference Documentation:**
-- xlsx: `/Users/michaeljabbour/dev/anthropic-skills/skills/xlsx/SKILL.md`
-- docx: `/Users/michaeljabbour/dev/anthropic-skills/skills/docx/SKILL.md`
-  - docx-js: `/Users/michaeljabbour/dev/anthropic-skills/skills/docx/docx-js.md`
-  - OOXML: `/Users/michaeljabbour/dev/anthropic-skills/skills/docx/ooxml.md`
-- pdf: `/Users/michaeljabbour/dev/anthropic-skills/skills/pdf/SKILL.md`
-  - forms: `/Users/michaeljabbour/dev/anthropic-skills/skills/pdf/forms.md`
+- xlsx: `~/dev/anthropic-skills/skills/xlsx/SKILL.md`
+- docx: `~/dev/anthropic-skills/skills/docx/SKILL.md`
+  - docx-js: `~/dev/anthropic-skills/skills/docx/docx-js.md`
+  - OOXML: `~/dev/anthropic-skills/skills/docx/ooxml.md`
+- pdf: `~/dev/anthropic-skills/skills/pdf/SKILL.md`
+  - forms: `~/dev/anthropic-skills/skills/pdf/forms.md`
 
 ## Presentation Style: "Useful Apple Keynote"
 

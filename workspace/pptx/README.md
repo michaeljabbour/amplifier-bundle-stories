@@ -69,4 +69,4 @@ Required Python packages:
 - defusedxml (for OOXML validation)
 - Pillow (for thumbnail generation)
 
-See `/Users/michaeljabbour/dev/anthropic-skills/skills/pptx/SKILL.md` for complete dependency list.
+See `~/dev/anthropic-skills/skills/pptx/SKILL.md` for complete dependency list.

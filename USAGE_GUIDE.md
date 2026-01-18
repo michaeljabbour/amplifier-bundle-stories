@@ -669,7 +669,7 @@ ls recipes/*.yaml
 
 # Use full path
 amplifier tool invoke recipes operation=execute \
-  recipe_path=/Users/michaeljabbour/dev/amplifier-module-stories/recipes/weekly-digest.yaml
+  recipe_path=.//recipes/weekly-digest.yaml
 ```
 
 ### Agents Not Loaded
