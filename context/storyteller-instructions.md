@@ -6,19 +6,50 @@ Detailed guidance for creating presentation decks.
 
 Before creating a deck, gather:
 
-1. **GitHub activity** - Use `gh` CLI to find:
+### ⚠️ CRITICAL: Source Verification (Avoid Anthropic Repos)
+
+**The risk**: GitHub may surface `anthropics/amplifier*` repos when searching for Amplifier features. These are NOT the repos you're looking for.
+
+**Default to the Microsoft Amplifier ecosystem** unless explicitly told otherwise:
+
+- ✅ **Core Amplifier**: `microsoft/amplifier*` (e.g., `microsoft/amplifier-core`, `microsoft/amplifier-foundation`)
+- ✅ **Team members**: `ramparte/*`, `momuno/*`, `payneio/*`, etc. (when researching team projects)
+- ✅ **Personal forks**: When user specifies their own work
+- ❌ **AVOID**: `anthropics/amplifier*` - different project, causes hallucinations
+
+**Verification steps BEFORE researching:**
+1. **Be explicit about org** in `gh` commands: `gh repo view microsoft/amplifier-core` (not just `amplifier-core`)
+2. **Cross-reference core features** against `microsoft/amplifier` MODULES.md
+3. **When in doubt**, ask the user which org/repo they mean
+
+**Red flags that you grabbed the wrong repo:**
+- References to Anthropic-internal tools or systems
+- Features that conflict with what's in Microsoft Amplifier docs
+- Repository URLs containing `/anthropics/` when user asked about "Amplifier"
+
+**When user says "Amplifier feature"** → Default to `microsoft/amplifier*`  
+**When user says "my project"** → Look at their repos (`ramparte/*` for this user)  
+**When user names an org** → Use that org explicitly
+
+### 1. **GitHub activity** - Use `gh` CLI to find:
    - Recent commits and PRs related to the feature
    - Timeline (when did development start/end?)
    - Number of repos touched
    - Key contributors
+   
+   **Example (note the explicit org scope):**
+   ```bash
+   gh repo view microsoft/amplifier-core
+   gh pr list --repo microsoft/amplifier-core --search "feature-name"
+   ```
 
-2. **Feature details** - Understand:
+### 2. **Feature details** - Understand:
    - What problem does it solve?
    - How does it work?
    - What's the user-facing impact?
    - Any metrics or numbers?
 
-3. **Narrative angle** - Decide the story:
+### 3. **Narrative angle** - Decide the story:
    - "Built with Amplifier" (showcase projects like Cortex)
    - "Amplifier Feature" (platform capabilities)
    - "Developer Experience" (tooling improvements)
